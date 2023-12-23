@@ -15,7 +15,7 @@ public class APIController {
 
     @GetMapping("")
     public boolean checkIfMuxIsConnected() throws NameRegistrar.NotFoundException {
-        MUX mux = QMUX.getMUX("agent-mux");
+        MUX mux = QMUX.getMUX("local_mux");
         return mux.isConnected();
     }
 }
