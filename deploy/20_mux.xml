@@ -1,4 +1,4 @@
-<mux class="org.jpos.q2.iso.QMUX" logger="agent_log" name="local_mux">
+<mux class="org.jpos.q2.iso.QMUX" logger="agent_log" name="mux">
     <in>local.receive</in>
     <out>local.send</out>
     <unhandled>local.unhandled</unhandled>
