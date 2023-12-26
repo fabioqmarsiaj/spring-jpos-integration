@@ -1,7 +1,7 @@
 <server class="org.jpos.q2.iso.QServer" logger="Q2" name="server">
     <attr name="port" type="java.lang.Integer">10000</attr>
     <channel class="org.jpos.iso.channel.BASE24TCPChannel"
-             logger="Q2" packager="org.jpos.iso.packager.ISO87BPackager">
+             logger="Q2" packager="com.fabioqmarsiaj.springjposintegration.CustomPackager">
     </channel>
     <request-listener class="org.jpos.bsh.BSHRequestListener" logger="Q2">
         <property name="source" value="cfg/serversimulator.bsh" />
