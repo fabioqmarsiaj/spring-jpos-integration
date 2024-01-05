@@ -1,8 +1,6 @@
 #!/bin/bash
-# set.ResponseMTI() makes the bit 0 from a ISOMsg become 0110 IF approved.
 message.setResponseMTI ();
 message.set (1, "0000000000000000");
 
 if ("0000000000000000".equals (message.getString (1)))
-# Simulates the server sending back the message
   source.send (message);
