@@ -1,7 +1,9 @@
-<server class="org.jpos.q2.iso.QServer" logger="Q2" name="server">
+<server class="org.jpos.q2.iso.QServer" logger="Q2" name="local">
     <attr name="port" type="java.lang.Integer">10000</attr>
     <channel class="org.jpos.iso.channel.BASE24TCPChannel"
              logger="Q2" packager="com.fabioqmarsiaj.springjposintegration.CustomPackager">
+        <property name="timeout" value="3600000" />
+        <property name="keep-alive" value="true" />
     </channel>
     <request-listener class="org.jpos.bsh.BSHRequestListener" logger="Q2">
         <property name="source" value="cfg/serversimulator.bsh" />

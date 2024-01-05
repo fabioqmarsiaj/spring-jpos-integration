@@ -1,0 +1,11 @@
+<channel-adaptor name='mychannel'
+                 class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2">
+    <channel class="org.jpos.iso.channel.BASE24TCPChannel" logger="Q2"
+             packager="com.fabioqmarsiaj.springjposintegration.CustomPackager">
+        <property name="host" value="127.0.0.1" />
+        <property name="port" value="10000" />
+    </channel>
+    <in>mychannel.send</in>
+    <out>mychannel.receive</out>
+    <reconnect-delay>10000</reconnect-delay>
+</channel-adaptor>

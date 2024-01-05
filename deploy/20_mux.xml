@@ -1,5 +1,6 @@
-<mux class="org.jpos.q2.iso.QMUX" logger="agent_log" name="mux">
-    <in>local.receive</in>
-    <out>local.send</out>
+<mux class="org.jpos.q2.iso.QMUX" logger="Q2" name="mymux">
+    <in>mychannel.receive</in>
+    <out>mychannel.send</out>
     <unhandled>local.unhandled</unhandled>
+    <key>0,1</key>
 </mux>
